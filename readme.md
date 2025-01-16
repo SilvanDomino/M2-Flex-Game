@@ -104,12 +104,14 @@ De parameter van de Animator kan je aanpassen in de code. Zet de volgende code _
     }
 ```
 
-We hebben nu toegang tot de animator. Om onze parameter in de Animator aan te passen, pas de volgende code aan.
+We hebben nu toegang tot de animator. Om onze parameter in de Animator aan te passen, pas de volgende code aan in de update. Voeg de regel `_animator.SetFloat("speed", 1)` toe aan de if statement.
 
 ```C#
 if (Input.GetKey(KeyCode.W))
 {
     movement += transform.forward * movementSpeed * Time.deltaTime;
-    _animator.SetFloat("Speed", 1);
+    _animator.SetFloat("speed", 1);
 }
 ```
+
+Nu wanneer je op W drukt wordt de snelheid op 1 gezet. Om de snelheid weer op 0 te krijgen als je W loslaat mag je zelf uitzoeken.
